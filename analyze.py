@@ -5,12 +5,10 @@ import os
 import ROOT
 from report_to_elog_scans import elog
 
-#data_folder = '/home/testbeam1/data/data_producer_runs/desy'
-data_folder = '../data_producer_runs/desy'
-data_folder = '/home/bgnet/corry_tutorial'
-corry_bin = '~/vtx/corryvreckan/bin/corry'
+data_folder = '/home/akumar/vtx_belle2/analysis/beam/2024_07_DESY/data/beam_data/desy'
+corry_bin = '/home/akumar/vtx_belle2/corryvreckan/bin/corry'
 corry_config_template = 'analysis.conf'
-output_dir = './corry_out'
+output_dir = '/home/akumar/vtx_belle2/analysis/beam/2024_07_DESY/corry_config_desytb_2024/ana_out'
 
 selected_keys = [
     "AnalysisDUT/Monopix2_0/local_residuals/residualsX",
@@ -135,7 +133,7 @@ for i in range(start, stop):
     
     number_of_events = args.n
 
-    geo_file = f'/home/bgnet/corry_tutorial/geoid{args.g}_dut_aligned.geo'
+    geo_file = f'/home/akumar/vtx_belle2/analysis/beam/2024_07_DESY/corry_config_desytb_2024/geometries/geoid{args.g}_dut_aligned.geo'
     output_file_name = f'analysis_run{current_run}'
     output_ttree_file_name = f'analysis_run{current_run}_tree.root'
 
